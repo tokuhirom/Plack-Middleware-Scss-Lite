@@ -60,7 +60,7 @@ sub call {
             $buf =~ s/\n/\\A/g;
             $buf =~ s/"/\\22/g;
             $buf =~ s/'/\\27/g;
-            return [200, [
+            return [500, [
                 'Content-Type' => 'text/css; charset=utf-8',
             ], [ qq{
                 body:before {
